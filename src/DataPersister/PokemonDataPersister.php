@@ -37,7 +37,6 @@ class PokemonDataPersister implements ContextAwareDataPersisterInterface
             $data->setUpdatedAt(new \DateTime());
         }
 
-        $this->pokemonService->isValidPokemon($data);
         //calculate or recalculate total property
         $data->setTotal($this->pokemonService->calculateTotal($data));
 

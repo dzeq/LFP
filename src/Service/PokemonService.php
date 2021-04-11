@@ -10,9 +10,4 @@ class PokemonService
     {
         return $pokemon->getAttack() + $pokemon->getHp() + $pokemon->getDefense() + $pokemon->getSpAtk() + $pokemon->getSpDef() + $pokemon->getSpeed();
     }
-
-    public function isValidPokemon($data)
-    {
-
-    }
 }

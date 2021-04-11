@@ -1,0 +1,14 @@
+App\Entity\Pokemon:
+  pokemon_{1..100}:
+    name: <word()>
+    type1: <word()>
+    type2: 80%? <word()>
+    total:  <numberBetween(100, 500)>
+    hp: <numberBetween(30, 150)>
+    attack: <numberBetween(30, 100)>
+    defense: <numberBetween(30, 100)>
+    spAtk: <numberBetween(30, 100)>
+    spDef: <numberBetween(30, 100)>
+    speed: <numberBetween(30, 100)>
+    generation: <numberBetween(1, 5)>
+    isLegendary: <boolean(50)>

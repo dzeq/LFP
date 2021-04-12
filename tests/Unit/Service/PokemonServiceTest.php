@@ -21,7 +21,6 @@ class PokemonServiceTest extends TestCase
 
         $result = $pokemonService->calculateTotal($pokemon);
 
-        // assert that addition is good
         self::assertEquals(60, $result);
     }
 }

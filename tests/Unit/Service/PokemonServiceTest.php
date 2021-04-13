@@ -2,8 +2,8 @@
 
 namespace App\Tests\Unit\Service;
 
-use App\Service\PokemonService;
 use App\Entity\Pokemon;
+use App\Service\PokemonService;
 use PHPUnit\Framework\TestCase;
 
 class PokemonServiceTest extends TestCase

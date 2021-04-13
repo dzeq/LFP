@@ -33,7 +33,7 @@ class PokemonDataPersister implements ContextAwareDataPersisterInterface
     public function persist($data, array $context = []): void
     {
         // Set the updatedAt value if it's not a POST request
-        if ($this->request->getMethod() !== 'POST') {
+        if ('POST' !== $this->request->getMethod()) {
             $data->setUpdatedAt(new \DateTime());
         }
 

@@ -192,129 +192,81 @@ class Pokemon
         return $this;
     }
 
-    /**
-     * @return int
-     */
     public function getHp(): int
     {
         return $this->hp;
     }
 
-    /**
-     * @param int $hp
-     */
     public function setHp(int $hp): void
     {
         $this->hp = $hp;
     }
 
-    /**
-     * @return int
-     */
     public function getAttack(): int
     {
         return $this->attack;
     }
 
-    /**
-     * @param int $attack
-     */
     public function setAttack(int $attack): void
     {
         $this->attack = $attack;
     }
 
-    /**
-     * @return int
-     */
     public function getDefense(): int
     {
         return $this->defense;
     }
 
-    /**
-     * @param int $defense
-     */
     public function setDefense(int $defense): void
     {
         $this->defense = $defense;
     }
 
-    /**
-     * @return int
-     */
     public function getSpAtk(): int
     {
         return $this->spAtk;
     }
 
-    /**
-     * @param int $spAtk
-     */
     public function setSpAtk(int $spAtk): void
     {
         $this->spAtk = $spAtk;
     }
 
-    /**
-     * @return int
-     */
     public function getSpDef(): int
     {
         return $this->spDef;
     }
 
-    /**
-     * @param int $spDef
-     */
     public function setSpDef(int $spDef): void
     {
         $this->spDef = $spDef;
     }
 
-    /**
-     * @return int
-     */
     public function getSpeed(): int
     {
         return $this->speed;
     }
 
-    /**
-     * @param int $speed
-     */
     public function setSpeed(int $speed): void
     {
         $this->speed = $speed;
     }
 
-    /**
-     * @return int
-     */
     public function getGeneration(): int
     {
         return $this->generation;
     }
 
-    /**
-     * @param int $generation
-     */
     public function setGeneration(int $generation): void
     {
         $this->generation = $generation;
     }
 
-    /**
-     * @return bool
-     */
     public function getIsLegendary(): bool
     {
         return $this->isLegendary;
     }
 
-    /**
-     * @param bool $isLegendary
-     */
     public function setIsLegendary(bool $isLegendary): void
     {
         $this->isLegendary = $isLegendary;

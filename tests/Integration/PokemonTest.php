@@ -3,8 +3,8 @@
 namespace App\Tests\Functional;
 
 use ApiPlatform\Core\Bridge\Symfony\Bundle\Test\ApiTestCase;
-use Hautelook\AliceBundle\PhpUnit\RefreshDatabaseTrait;
 use App\Entity\Pokemon;
+use Hautelook\AliceBundle\PhpUnit\RefreshDatabaseTrait;
 
 class PokemonTest extends ApiTestCase
 {
@@ -70,17 +70,17 @@ class PokemonTest extends ApiTestCase
 
     public function testCreateInvalidPokemon(): void
     {
-        $response = static::createClient()->request('POST', '/api/pokemon', ['json' => ["name" => 'null']]);
+        $response = static::createClient()->request('POST', '/api/pokemon', ['json' => ['name' => 'null']]);
 
         self::assertResponseStatusCodeSame(422);
-        self::assertResponseHeaderSame('content-type',  'application/ld+json; charset=utf-8');
+        self::assertResponseHeaderSame('content-type', 'application/ld+json; charset=utf-8');
 
         //check if we have a nice error message
         self::assertJsonContains([
             '@context' => '/api/contexts/ConstraintViolationList',
             '@type' => 'ConstraintViolationList',
             'hydra:title' => 'An error occurred',
-            'hydra:description' => "type1: This value should not be blank.\nhp: This value should not be blank.\nattack: This value should not be blank.\ndefense: This value should not be blank.\nspAtk: This value should not be blank.\nspDef: This value should not be blank.\nspeed: This value should not be blank.\ngeneration: This value should not be blank.\nisLegendary: This value should not be null."
+            'hydra:description' => "type1: This value should not be blank.\nhp: This value should not be blank.\nattack: This value should not be blank.\ndefense: This value should not be blank.\nspAtk: This value should not be blank.\nspDef: This value should not be blank.\nspeed: This value should not be blank.\ngeneration: This value should not be blank.\nisLegendary: This value should not be null.",
         ]);
     }
 
